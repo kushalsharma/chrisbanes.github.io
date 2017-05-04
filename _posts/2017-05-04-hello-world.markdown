@@ -4,5 +4,4 @@ title: Hello World
 date: '2017-05-04'
 ---
 
-This is a blog. My personal blog! 
-
+Hello world! This is my personal blog and any views expressed here are solely mine.
