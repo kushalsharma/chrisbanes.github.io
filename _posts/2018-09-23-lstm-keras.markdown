@@ -9,34 +9,6 @@ import sys
 !{sys.executable} -m pip install -r requirements.txt
 ```
 
-    Requirement already satisfied: numpy==1.14.5 in /anaconda2/envs/tensorflow3.6/lib/python3.6/site-packages (from -r requirements.txt (line 1)) (1.14.5)
-    Requirement already satisfied: pandas==0.21.1 in /anaconda2/envs/tensorflow3.6/lib/python3.6/site-packages (from -r requirements.txt (line 2)) (0.21.1)
-    Requirement already satisfied: keras==2.2.2 in /anaconda2/envs/tensorflow3.6/lib/python3.6/site-packages (from -r requirements.txt (line 3)) (2.2.2)
-    Requirement already satisfied: requests==2.18.4 in /anaconda2/envs/tensorflow3.6/lib/python3.6/site-packages (from -r requirements.txt (line 4)) (2.18.4)
-    Requirement already satisfied: scipy==1.0.0 in /anaconda2/envs/tensorflow3.6/lib/python3.6/site-packages (from -r requirements.txt (line 5)) (1.0.0)
-    Requirement already satisfied: scikit-learn==0.19.1 in /anaconda2/envs/tensorflow3.6/lib/python3.6/site-packages (from -r requirements.txt (line 6)) (0.19.1)
-    Requirement already satisfied: matplotlib==2.2.3 in /anaconda2/envs/tensorflow3.6/lib/python3.6/site-packages (from -r requirements.txt (line 7)) (2.2.3)
-    Requirement already satisfied: pytz>=2011k in /anaconda2/envs/tensorflow3.6/lib/python3.6/site-packages (from pandas==0.21.1->-r requirements.txt (line 2)) (2018.4)
-    Requirement already satisfied: python-dateutil>=2 in /anaconda2/envs/tensorflow3.6/lib/python3.6/site-packages (from pandas==0.21.1->-r requirements.txt (line 2)) (2.7.3)
-    Requirement already satisfied: six>=1.9.0 in /anaconda2/envs/tensorflow3.6/lib/python3.6/site-packages (from keras==2.2.2->-r requirements.txt (line 3)) (1.11.0)
-    Requirement already satisfied: pyyaml in /anaconda2/envs/tensorflow3.6/lib/python3.6/site-packages (from keras==2.2.2->-r requirements.txt (line 3)) (3.12)
-    Requirement already satisfied: h5py in /anaconda2/envs/tensorflow3.6/lib/python3.6/site-packages (from keras==2.2.2->-r requirements.txt (line 3)) (2.8.0)
-    Requirement already satisfied: keras_applications==1.0.4 in /anaconda2/envs/tensorflow3.6/lib/python3.6/site-packages (from keras==2.2.2->-r requirements.txt (line 3)) (1.0.4)
-    Requirement already satisfied: keras_preprocessing==1.0.2 in /anaconda2/envs/tensorflow3.6/lib/python3.6/site-packages (from keras==2.2.2->-r requirements.txt (line 3)) (1.0.2)
-    Requirement already satisfied: chardet<3.1.0,>=3.0.2 in /anaconda2/envs/tensorflow3.6/lib/python3.6/site-packages (from requests==2.18.4->-r requirements.txt (line 4)) (3.0.4)
-    Requirement already satisfied: certifi>=2017.4.17 in /anaconda2/envs/tensorflow3.6/lib/python3.6/site-packages (from requests==2.18.4->-r requirements.txt (line 4)) (2018.8.13)
-    Requirement already satisfied: idna<2.7,>=2.5 in /anaconda2/envs/tensorflow3.6/lib/python3.6/site-packages (from requests==2.18.4->-r requirements.txt (line 4)) (2.6)
-    Requirement already satisfied: urllib3<1.23,>=1.21.1 in /anaconda2/envs/tensorflow3.6/lib/python3.6/site-packages (from requests==2.18.4->-r requirements.txt (line 4)) (1.22)
-    Requirement already satisfied: kiwisolver>=1.0.1 in /anaconda2/envs/tensorflow3.6/lib/python3.6/site-packages (from matplotlib==2.2.3->-r requirements.txt (line 7)) (1.0.1)
-    Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,>=2.0.1 in /anaconda2/envs/tensorflow3.6/lib/python3.6/site-packages (from matplotlib==2.2.3->-r requirements.txt (line 7)) (2.2.0)
-    Requirement already satisfied: cycler>=0.10 in /anaconda2/envs/tensorflow3.6/lib/python3.6/site-packages (from matplotlib==2.2.3->-r requirements.txt (line 7)) (0.10.0)
-    Requirement already satisfied: setuptools in /anaconda2/envs/tensorflow3.6/lib/python3.6/site-packages (from kiwisolver>=1.0.1->matplotlib==2.2.3->-r requirements.txt (line 7)) (39.2.0)
-    [31mtwisted 18.7.0 requires PyHamcrest>=1.9.0, which is not installed.[0m
-    [31mtensorflow 1.10.0 has requirement setuptools<=39.1.0, but you'll have setuptools 39.2.0 which is incompatible.[0m
-    [33mYou are using pip version 10.0.1, however version 18.0 is available.
-    You should consider upgrading via the 'pip install --upgrade pip' command.[0m
-
-
 
 ```python
 import math
