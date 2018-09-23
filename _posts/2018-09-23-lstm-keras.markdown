@@ -4,7 +4,6 @@ title: A simple LSTM using Keras for sequence prediction
 date: '2018-09-23'
 ---
 
-
 ```python
 import sys
 !{sys.executable} -m pip install -r requirements.txt
@@ -375,5 +374,5 @@ plt.show()
 ```
 
 
-![png](../content/images/output_14_0.png)
+![png](/content/images/output_14_0.png)
 
