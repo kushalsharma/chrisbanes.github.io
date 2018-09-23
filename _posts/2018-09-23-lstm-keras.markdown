@@ -198,9 +198,9 @@ plt.show()
 
 [You can find full working example in jupyter notebook at this linked github repo.](https://github.com/kushalsharma/keras-lstm)
 
-#### References
-- http://papers.nips.cc/paper/5956-scheduled-sampling-for-sequence-prediction- with-recurrent-neural-networks.pdf
-- https://machinelearningmastery.com/models-sequence-prediction-recurrent-neural-networks/
-- http://colah.github.io/posts/2015-08-Understanding-LSTMs/
-- https://en.wikipedia.org/wiki/Root-mean-square_deviation
-- https://en.wikipedia.org/wiki/Long_short-term_memory
+##### References
+<sub><sup><sub><sup>- http://papers.nips.cc/paper/5956-scheduled-sampling-for-sequence-prediction- with-recurrent-neural-networks.pdf</sup></sub></sup></sub>  
+<sub><sup><sub><sup>- https://machinelearningmastery.com/models-sequence-prediction-recurrent-neural-networks/</sup></sub></sup></sub>  
+<sub><sup><sub><sup>- http://colah.github.io/posts/2015-08-Understanding-LSTMs/</sup></sub></sup></sub>  
+<sub><sup><sub><sup>- https://en.wikipedia.org/wiki/Root-mean-square_deviation</sup></sub></sup></sub>  
+<sub><sup><sub><sup>- https://en.wikipedia.org/wiki/Long_short-term_memory</sup></sub></sup></sub>  
