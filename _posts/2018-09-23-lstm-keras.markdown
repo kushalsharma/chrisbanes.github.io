@@ -34,8 +34,6 @@ The output gate selects useful information from the current cell state and show 
 
 Then it makes a filter using the values of h_t-1 and x_t, such that it can regulate the values that need to be output from the vector created above. This filter again employs a sigmoid function. Lastly it multiplies the value of this regulatory filter to the vector created using the tanh function, and sending it out as a output along with to the hidden state of the next cell.
 
-
-
 ```python
 import sys
 !{sys.executable} -m pip install -r requirements.txt
@@ -138,7 +136,6 @@ model.fit(train_x, train_y, epochs=100, batch_size=1, verbose=2)
     Epoch 100/100
      - 0s - loss: 0.0109
 
-
 Once the model is fit, we can estimate the performance of the model on the train and test datasets.
 
 ```python
@@ -170,7 +167,6 @@ print('Test Score: %.2f RMSE' % test_score)
     Train Score: 43.06 RMSE
     Test Score: 47.65 RMSE
 
-
 ```python
 # shift train predictions for plotting
 train_predict_plot = numpy.empty_like(data_set)
@@ -199,8 +195,10 @@ plt.show()
 
 ![png](/content/images/output_14_0.png)
 
+[Github: kushalsharma/keras-lstm](https://github.com/kushalsharma/keras-lstm)
 
-<sub><sup>- http://papers.nips.cc/paper/5956-scheduled-sampling-for-sequence-prediction-with-recurrent-neural-networks.pdf</sup></sub>
-<sub><sup>- http://colah.github.io/posts/2015-08-Understanding-LSTMs/</sup></sub>
-<sub><sup>- https://en.wikipedia.org/wiki/Root-mean-square_deviation</sup></sub>
-<sub><sup>- https://en.wikipedia.org/wiki/Long_short-term_memory</sup></sub>
+#### References
+<sub><sup>- http://papers.nips.cc/paper/5956-scheduled-sampling-for-sequence-prediction-with-recurrent-neural-networks.pdf</sup></sub><br/>
+<sub><sup>- http://colah.github.io/posts/2015-08-Understanding-LSTMs/</sup></sub><br/>
+<sub><sup>- https://en.wikipedia.org/wiki/Root-mean-square_deviation</sup></sub><br/>
+<sub><sup>- https://en.wikipedia.org/wiki/Long_short-term_memory</sup></sub><br/>
