@@ -66,7 +66,7 @@ def create_data_set(_data_set, _look_back=1):
     return numpy.array(data_x), numpy.array(data_y)
 ```
 
-This default will create a dataset where X is the price if the stock at a given time (t) and Y is the proce of the stock at the next time (t + 1).
+This default will create a dataset where X is the quantity of the item at a given time (t) and Y is quantity of the item at the next time (t + 1).
 
 ```python
 # load the data_set
@@ -99,6 +99,7 @@ The LSTM network expects the input data (X) to be provided with a specific array
 look_back = 1
 train_x, train_y = create_data_set(train, look_back)
 test_x, test_y = create_data_set(test, look_back)
+
 # reshape input to be [samples, time steps, features]
 train_x = numpy.reshape(train_x, (train_x.shape[0], 1, train_x.shape[1]))
 test_x = numpy.reshape(test_x, (test_x.shape[0], 1, test_x.shape[1]))
