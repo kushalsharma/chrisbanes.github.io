@@ -41,6 +41,7 @@ import sys
 !{sys.executable} -m pip install -r requirements.txt
 ```
 
+Import all the required python modules
 
 ```python
 import math
@@ -54,6 +55,7 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import mean_squared_error
 ```
 
+We create a create data set function that takes two arguments: the dataset, which is a NumPy array that we want to convert into a dataset, and the look_back, which is the number of previous time steps to use as input variables to predict the next time period, in this case defaulted to 1.
 
 ```python
 # convert an array of values into a data_set matrix
@@ -66,6 +68,7 @@ def create_data_set(_data_set, _look_back=1):
     return numpy.array(data_x), numpy.array(data_y)
 ```
 
+This default will create a dataset where X is the price if the stock at a given time (t) and Y is the proce of the stock at the next time (t + 1).
 
 ```python
 # load the data_set
@@ -74,6 +77,7 @@ data_set = data_frame.values
 data_set = data_set.astype('float32')
 ```
 
+LSTMs are sensitive to the scale of the input data, specifically when the sigmoid or tanh activation functions are used. We rescale the data to the range of 0-to-1. This is also called normalizing. We will normalize the dataset using the MinMaxScaler preprocessing class from the scikit-learn library.
 
 ```python
 # normalize the data_set
@@ -81,6 +85,7 @@ scaler = MinMaxScaler(feature_range=(0, 1))
 data_set = scaler.fit_transform(data_set)
 ```
 
+After we model our data and estimate the accuracy of our model on the training dataset, we need to get an idea of the skill of the model on new unseen data. For a normal classification or regression problem, we would do this using cross validation. With time series data, the sequence of values is important. A simple method that we used is to split the ordered dataset into train and test datasets. The code below calculates the index of the split point and separates the data into the training datasets with 67% of the observations that we can use to train our model, leaving the remaining 33% for testing the model.
 
 ```python
 # split into train and test sets
@@ -89,21 +94,19 @@ test_size = len(data_set) - train_size
 train, test = data_set[0:train_size, :], data_set[train_size:len(data_set), :]
 ```
 
+The LSTM network expects the input data (X) to be provided with a specific array structure in the form of : [samples, time steps, features]. Currently, our data is in the form : [samples, features] and we are framing the problem as one time step for each sample. We can transform the prepared train and test input data into the expected structure using numpy.reshape()
 
 ```python
 # reshape into X=t and Y=t+1
 look_back = 1
 train_x, train_y = create_data_set(train, look_back)
 test_x, test_y = create_data_set(test, look_back)
-```
-
-
-```python
 # reshape input to be [samples, time steps, features]
 train_x = numpy.reshape(train_x, (train_x.shape[0], 1, train_x.shape[1]))
 test_x = numpy.reshape(test_x, (test_x.shape[0], 1, test_x.shape[1]))
 ```
 
+Now we build the LSTM network. The network has a visible layer with one input, one hidden layer with four LSTM blocks or neurons and an output layer that makes a single value prediction.
 
 ```python
 # create and fit the LSTM network
@@ -136,12 +139,15 @@ model.fit(train_x, train_y, epochs=100, batch_size=1, verbose=2)
      - 0s - loss: 0.0109
 
 
+Once the model is fit, we can estimate the performance of the model on the train and test datasets.
+
 ```python
 # make predictions
 train_predict = model.predict(train_x)
 test_predict = model.predict(test_x)
 ```
 
+We invert the predictions before calculating error scores to ensure that performance is reported in the same units as the original data.
 
 ```python
 # invert predictions
@@ -151,6 +157,7 @@ test_predict = scaler.inverse_transform(test_predict)
 test_y = scaler.inverse_transform([test_y])
 ```
 
+Next we will calculate the error score that is RMSE value for the model.
 
 ```python
 # calculate root mean squared error
@@ -164,7 +171,6 @@ print('Test Score: %.2f RMSE' % test_score)
     Test Score: 47.65 RMSE
 
 
-
 ```python
 # shift train predictions for plotting
 train_predict_plot = numpy.empty_like(data_set)
@@ -172,6 +178,7 @@ train_predict_plot[:, :] = numpy.nan
 train_predict_plot[look_back:len(train_predict) + look_back, :] = train_predict
 ```
 
+Because of how the dataset was prepared, we will shift the predictions so that they align on the x-axis with the original dataset.
 
 ```python
 # shift test predictions for plotting
@@ -180,6 +187,7 @@ test_predict_plot[:, :] = numpy.nan
 test_predict_plot[len(train_predict) + (look_back * 2) + 1:len(data_set) - 1, :] = test_predict
 ```
 
+Once prepared, we plot the data showing the original dataset in blue, the predictions for the training dataset in orange, and the predictions on the unseen test dataset in green.
 
 ```python
 # plot baseline and predictions
@@ -189,6 +197,10 @@ plt.plot(test_predict_plot)
 plt.show()
 ```
 
-
 ![png](/content/images/output_14_0.png)
 
+
+<sub><sup>- http://papers.nips.cc/paper/5956-scheduled-sampling-for-sequence-prediction-with-recurrent-neural-networks.pdf</sup></sub>
+<sub><sup>- http://colah.github.io/posts/2015-08-Understanding-LSTMs/</sup></sub>
+<sub><sup>- https://en.wikipedia.org/wiki/Root-mean-square_deviation</sup></sub>
+<sub><sup>- https://en.wikipedia.org/wiki/Long_short-term_memory</sup></sub>
