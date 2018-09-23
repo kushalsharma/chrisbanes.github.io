@@ -9,7 +9,7 @@ permalink:        pretty
 title:            Kushal Sharma
 description:      'I work as Software developer at Flipkart in Bangalore.'
 url:              http://kushal.xyz
-baseurl:          /
+baseurl:          http://kushal.xyz
 logo:             /content/images/me.jpg
 
 author:
@@ -27,7 +27,7 @@ gems:
   - jekyll-sitemap
   - jekyll-paginate
 
-twitter: '@'
+twitter: '@rogerthatgame'
 
 kramdown:
   # Enable GitHub Flavored Markdown (fenced code blocks)
