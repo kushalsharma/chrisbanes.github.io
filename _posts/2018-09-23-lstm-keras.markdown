@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A simple LSTM network using Keras for sequence prediction.
+title: A simple LSTM network using Keras for sequence prediction
 date: '2018-09-23'
 cover_image: /content/images/Iterative_Places-GoogLeNet.jpg
 ---
