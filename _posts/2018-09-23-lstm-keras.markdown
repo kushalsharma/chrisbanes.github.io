@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A simple LSTM network using Keras for sequence prediction
+title: LSTM network using Keras for sequence prediction
 date: '2018-09-23'
 cover_image: /content/images/Iterative_Places-GoogLeNet.jpg
 ---
@@ -197,3 +197,10 @@ plt.show()
 ![png](/content/images/output_14_0.png)
 
 [You can find full working example in jupyter notebook at this linked github repo.](https://github.com/kushalsharma/keras-lstm)
+
+#### References
+- http://papers.nips.cc/paper/5956-scheduled-sampling-for-sequence-prediction- with-recurrent-neural-networks.pdf
+- https://machinelearningmastery.com/models-sequence-prediction-recurrent-neural-networks/
+- http://colah.github.io/posts/2015-08-Understanding-LSTMs/
+- https://en.wikipedia.org/wiki/Root-mean-square_deviation
+- https://en.wikipedia.org/wiki/Long_short-term_memory
