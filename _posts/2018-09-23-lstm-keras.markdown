@@ -195,4 +195,4 @@ plt.show()
 
 ![png](/content/images/output_14_0.png)
 
-You can find the dull working example at this [linked github repo].(https://github.com/kushalsharma/keras-lstm)
+[You can find full working example in jupyter notebook at this linked github repo.](https://github.com/kushalsharma/keras-lstm)
