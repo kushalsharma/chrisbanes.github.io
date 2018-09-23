@@ -195,10 +195,4 @@ plt.show()
 
 ![png](/content/images/output_14_0.png)
 
-[Github: kushalsharma/keras-lstm](https://github.com/kushalsharma/keras-lstm)
-
-#### References
-<sub><sup>- http://papers.nips.cc/paper/5956-scheduled-sampling-for-sequence-prediction-with-recurrent-neural-networks.pdf</sup></sub><br/>
-<sub><sup>- http://colah.github.io/posts/2015-08-Understanding-LSTMs/</sup></sub><br/>
-<sub><sup>- https://en.wikipedia.org/wiki/Root-mean-square_deviation</sup></sub><br/>
-<sub><sup>- https://en.wikipedia.org/wiki/Long_short-term_memory</sup></sub><br/>
+You can find the dull working example at this [linked github repo].(https://github.com/kushalsharma/keras-lstm)
