@@ -197,9 +197,11 @@ plt.show()
 ![png](/content/images/output_14_0.png)
 
 [You can find full working example in jupyter notebook at this linked github repo.](https://github.com/kushalsharma/keras-lstm)
+&nbsp;
 
+&nbsp;
 
-
+&nbsp;
 
 ##### References
 <sub><sup>http://papers.nips.cc/paper/5956-scheduled-sampling-for-sequence-prediction- with-recurrent-neural-networks.pdf</sup></sub>  
