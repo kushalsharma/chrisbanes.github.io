@@ -2,7 +2,7 @@
 layout: post
 title: Print directory structure as tree in Linux
 date: '2019-01-23'
-cover_image: /content/images/dir-tree.png
+cover_image: /content/images/dir_tree.png
 ---
 
 Graphical representation of the current sub-directories without files :
