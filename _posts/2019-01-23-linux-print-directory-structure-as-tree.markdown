@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Print directory structure as tree in Linux
+title: Graphical representation of sub-directories
 date: '2019-01-23'
 cover_image: /content/images/dir_tree.png
 ---
