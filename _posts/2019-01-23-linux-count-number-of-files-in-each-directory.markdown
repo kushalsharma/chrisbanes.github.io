@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Graphical representation of number of files in each sub-directories in Linux
+title: Number of files in sub-directories Linux
 date: '2019-01-23'
 cover_image: /content/images/count_dir.png
 ---
