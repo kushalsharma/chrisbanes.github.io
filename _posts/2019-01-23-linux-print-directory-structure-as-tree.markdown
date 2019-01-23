@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Graphical representation of sub-directories in Linux
+title: Sub-directories in Linux
 date: '2019-01-23'
 cover_image: /content/images/dir_tree.png
 ---
