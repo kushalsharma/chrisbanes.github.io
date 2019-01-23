@@ -7,7 +7,9 @@ cover_image: /content/images/dir_tree.png
 
 Graphical representation of the current sub-directories without files :
 
-    ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'
+    ls -R | 
+    grep ":$" | 
+    sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'
 
 Output : 
 
@@ -21,7 +23,8 @@ Output :
 
 Graphical representation of the current sub-directories with files :
 
-    find . | sed -e "s/[^-][^\/]*\// |/g" -e "s/|\([^ ]\)/|-\1/"
+    find . | 
+    sed -e "s/[^-][^\/]*\// |/g" -e "s/|\([^ ]\)/|-\1/"
 
 Output : 
 
