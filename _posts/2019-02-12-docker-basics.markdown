@@ -23,10 +23,10 @@ Exit running image
 
 ### Save image as tar file
     docker images
-    docker save imageId > [/path/to/file.tar]
+    docker save [imageId] > [/path/to/file.tar]
 
 ### Copy image tar to remote machine
-    rsync -avP [/path/to/file.tar] user@host:/path/to/dir
+    rsync -avP [/path/to/file.tar] [user@host:/path/to/dir]
 
 ### Load image on remote machine
     docker load < [/path/to/file.tar]
