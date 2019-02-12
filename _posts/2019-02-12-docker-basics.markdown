@@ -2,7 +2,7 @@
 layout: post
 title: Beginners guide to Docker
 date: '2019-02-12'
-cover_image: /content/images/docker-card.jpg
+cover_image: /content/images/docker-card.png
 ---
 
 
