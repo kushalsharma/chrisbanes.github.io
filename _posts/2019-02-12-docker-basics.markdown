@@ -2,7 +2,7 @@
 layout: post
 title: Docker save & load
 date: '2019-02-12'
-cover_image: /content/images/docker-card.png
+cover_image: /content/images/post_2.jpg
 ---
 
 

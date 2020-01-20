@@ -2,7 +2,7 @@
 layout: post
 title: LSTM network using Keras for sequence prediction
 date: '2018-09-23'
-cover_image: /content/images/Iterative_Places-GoogLeNet.jpg
+cover_image: /content/images/post_1.jpg
 ---
 
 Long short-term memory (LSTM) units are units of a recurrent neural network (RNN). An RNN composed of LSTM units is often called an LSTM network. A common LSTM unit is composed of a cell, an input gate, an output gate and a forget gate. The cell remembers values over arbitrary time intervals and the three gates regulate the flow of information into and out of the cell. LSTM networks are well-suited to classifying, processing and making predictions based on time series data, since there can be lags of unknown duration between important events in a time series.
